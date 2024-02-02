@@ -1,0 +1,458 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #017489;
+    border-radius: 5rem;
+}
+
+body{
+    background-color: #E4E4E4;
+    font-family: "Dancing Script", cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* overflow: hidden; */
+}
+
+a{
+    color: #ffffff;
+    font-family: "Dancing Script", cursive;
+    text-decoration: none;
+
+}
+
+
+p{
+    font-family: "Dancing Script", cursive;
+
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header.sticky  {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 9px 12%;
+}
+.logo  {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.logo h2::first-letter{
+    color: #017489;
+}
+
+header .navlist{
+    display: flex;
+}
+
+.navlist li{
+    margin: 0 1.5rem;
+}
+
+.navlist li .nav-item{
+    position: relative;
+    padding: 17px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all .2s ease;
+}
+
+.navlist li .nav-item:hover{
+    color:#ffffff;
+}
+
+.navlist li .nav-item::before{
+    content: "";
+    position:absolute ;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background:#ffffff;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.navlist li .nav-item:hover::before{
+    width: 100%;
+}
+
+.navlist li .active{
+    color:#ffffff;
+    border-bottom:#ffffff 1.5px solid ;
+}
+
+
+
+.btn{
+    background-color: #0097B2 ;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    display: inline-block;
+    color: #000;
+    align-items: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+}
+
+
+.btn:hover{
+    background-color: #0097B2;
+    box-shadow: 0 3px 9px #017489;
+}
+
+#banner{
+    background-image: url(img/rome\ 2-darck.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+
+
+
+.banner-text{
+text-align: center;
+color: #fff;
+padding-top: 180px;
+}
+.banner-text h1{
+    font-size: 80px  ;
+    font-family: "Dancing Script", cursive;
+
+}
+.banner-text p{
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+}
+
+.banner-text .btn1{
+    background-color: #ffffff ;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    padding: 0 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    display: inline-block;
+    color: #0CC0DF;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+}
+
+.btn1:hover{
+    background-color: #eceaea;
+    box-shadow: 0 3px 9px #ffffff;
+}
+
+
+
+
+.Reservation {
+    background-color: #fff;
+    padding: 1px;
+    border-radius: 50px;
+    margin: 20px 5rem 0 5rem;
+    
+}
+
+form {
+    margin: 10px;
+    
+}
+
+label {
+    
+    color:#017489;
+    font-family: "Oleo Script", system-ui;
+
+}
+
+input {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 1px #017489;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+
+
+input:hover{
+    border: 2px solid #017489;
+}
+select{
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: solid 1px #017489;
+    border-radius: 50px;
+}
+select:hover{
+    border: 2px solid #017489;
+
+}
+
+button {
+    background-color: #0097B2 ;
+    height: 30px;
+    border-radius: 50px;
+    padding: 0 20px;
+    font-weight: 700;
+    color: #000;
+    align-items: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: #0097B2;
+    box-shadow: 0 1px 5px #017489;
+
+}
+
+
+
+
+
+
+.row {
+   
+  align-items: center;
+    margin-top: 200px;
+    margin-bottom: 180px;
+}
+  
+.img-box img {
+    width: 100%;
+    border-radius: 30px;
+  }
+  
+  .detail-box h3{
+    font-size: 26px;
+    color: #017489;
+    margin-bottom: 20p;
+  }
+
+  .detail-box h2{
+    font-size: 46px;
+    color: #000;
+  }
+  .detail-box p{
+    font-size: 26px;
+    color: #017489;
+  }
+
+  .detail-box .About-btn{
+    position:relative;
+    left: 30%;
+  }
+  
+  .About-btn{
+    background-color: #0097B2 ;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50px;
+    padding: 0 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    display: inline-block;
+    color: #000;
+    align-items: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+  }
+  .About-btn:hover{
+    background-color: #0097B2;
+    box-shadow: 0 3px 9px #017489;
+  }
+  
+  /* صفحة الغرق */
+
+  .room h1{
+    text-align: center;
+    color: #017489;
+  }
+
+.room-detels{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+
+.room-detels .card{
+    width: 18rem;
+    margin:10px 20px 200px ;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color:#017489;
+
+}
+.card h5{
+    padding: 0 33%;
+    font-size: 25px;
+}
+.card img{
+    border-top-right-radius: 30px;
+}
+
+/* صفحة الخدمات */
+.SERVICES{
+    /* margin-top: 200px; */
+    margin-bottom: 180px;
+}
+.contenar{
+    /* background-color: #0097B2 ; */
+    background: url(img/apartment.jpg);
+    background-position: center;
+    background-size:cover;
+    width: 100%;
+    height: 25rem;
+    line-height: 28px;
+    padding: 0 20px;
+    margin: 50px 0 50px;
+    display: block;
+}
+
+.servicec-text{
+    position: absolute;
+    left: 60rem;
+    width: 20rem;
+    color: #017489;
+    background-color: #E4E4E4;
+    padding:  50px 0px 0px 50px;
+    height: 27rem;
+}
+
+.servicec-text h3{
+font-size: 20px;
+}
+
+
+
+
+
+
+
+/* القائمة السفلية */
+footer{
+    width: 100%;
+    height: auto;
+    background: #AFE2ED;
+    padding: 3rem 12% ;
+    color: #000;
+}
+
+.container-foot{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 4rem;
+}
+
+.container-foot .rightBox .social-media{
+    display: flex;
+
+}
+
+.container-foot .title{
+    font-size: 1.5rem;
+    color:#000;
+    font-weight: 600;
+}
+
+.leftBox p{
+    padding: 25px 0;
+    line-height: 1.5rem;
+
+}
+
+.social-media{
+    font-size: 1.5rem;
+}
+
+.social-media a:hover{
+    color:#017489
+}
+
+.social-media li{
+   margin-right: 1rem;
+   margin-top:2rem ; 
+}
+
+.Quick-menu li a{
+    margin-top: 1rem;
+    font-size: 20PX;
+    color: #000;
+}
+
+.Quick-menu li a:hover{
+    color:#017489
+}
+
+.info li{
+    /* display: flex ; */
+    margin:  1.5rem 1rem 1rem 0;
+    column-gap: 5px;
+}
+
+
+
+
+
+
