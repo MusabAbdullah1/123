@@ -17,20 +17,18 @@ if(!$conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$DBname))
 
         //something was posted
         $name = $_POST['name'];
-        $Guest = $_POST['Guest'];
-        $checkIn = $_POST['checkIn'];
-        $checkOut = $_POST['checkOut'];
-        $Room = $_POST['Room'];
-
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+       
 
         
 
-        if(!empty($Room))
+        if(!empty($message))
         {
 
             //save to database
 
-            $query = "insert into ordar (name,Guest,checkIn,checkOut,Room) values ('$name','$Guest','$checkIn','$checkOut','$Room')";
+            $query = "insert into Contact (name,email,message) values ('$name','$email','$message')";
 
             mysqli_query($conn, $query);
             header("Location: index.html");

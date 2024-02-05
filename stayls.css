@@ -35,7 +35,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* overflow: hidden; */
 }
 
 a{
@@ -347,6 +346,8 @@ button:hover {
     padding: 0 33%;
     font-size: 25px;
 }
+
+
 .card img{
     border-top-right-radius: 30px;
 }
