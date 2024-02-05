@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +40,10 @@
 
 
 <body>
+ 
+
+
+
     
     <header>
       
@@ -68,12 +77,12 @@
         </div>
         <div class="Reservation">
           <!-- <h1>Hotel Room Reservation</h1> -->
-          <form action="#" method="post" id="reservationForm">
+          <form action="book.php" method="post" id="reservationForm">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name"  required>
 
               <label for="num">Guest:</label>
-              <input type="number" id="number" name="number" required>
+              <input type="number" id="number" name="Guest" required>
 
               <label for="checkIn">Check-in Date:</label>
               <input type="date" id="checkIn" name="checkIn" required>
@@ -120,12 +129,10 @@
                      About us
                     </h2>
                   </div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolores praesentium
-                   consectetur quae, quasi nostrum officiis ex adipisci. Porro, qui doloremque itaque debitis
-                   dignissimos eligendi? Quos ratione cum nesciunt autem?
-                  </p>
+                  <p>Musab ali abdullah 202200580<br/>Musab ali abdullah 202200580<br/>Musab ali abdullah 202200580<br/>
+                    Musab ali abdullah 202200580</p>
                   <div >
-                    <a href="#" class="About-btn">About us</a>
+                    <!-- <a href="#" class="About-btn">About us</a> -->
                 </div>
                 </div>
 
@@ -139,11 +146,12 @@
   <h1>-----OUR LIVING ROOM-----</h1>
 <div class="room-detels">
   
+  
  <!-- ---------------------------------------------------------  -->
   <div class="card">
     <img src="img/rome 2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">VIP</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <!-- <a href="#" class="btn ">More</a> -->
     </div>
@@ -153,7 +161,7 @@
    <div class="card">
     <img src="img/rome 2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">Sea view</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <!-- <a href="#" class="btn ">More</a> -->
     </div>
@@ -163,7 +171,7 @@
    <div class="card">
     <img src="img/rome 2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">Nuorml View</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <!-- <a href="#" class="btn ">More</a> -->
     </div>
@@ -194,12 +202,6 @@
 
 </section>
 <!-- نهاية صفحة الخدمات -->
-
-<!-- بداية صفحة  الاراء  -->
-
-
-
-<!-- نهاية صفحة  الاراء -->
 
 
 

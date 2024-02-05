@@ -1,50 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Customer insert</title>
-</head>
-<body>
 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user-hotle";
+<?php 
+$dbservername = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$DBname = "hotel";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+
+if(!$conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$DBname))
+{
+
+    die("failed to connect!");
 }
 
-$username = strtoupper($_POST['username']);
-$password = $_POST['password'];
+session_start();
 
-// Escaping user input to prevent SQL injection
-$username = $conn->real_escape_string($username);
+  
 
-$sql = "SELECT password FROM register WHERE username = '$username'";
-$result = $conn->query($sql);
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        //something was posted
+        $email = $_POST['email1'];
+        $password = $_POST['password1'];
+        
 
-if ($result->num_rows > 0) {
-    // Username found, check the password
-    $row = $result->fetch_assoc();
-    $storedPassword = $row['password'];
+        if(!empty($email) && !empty($password))
+        {
 
-    if ($password === $storedPassword) {
-        header("Location: ../More-info.html");
-    } else {
-        echo "Password is incorrect.";
+            //read from database
+            $query = "select * from user where email2 = '$email' limit 1";
+            $result = mysqli_query($conn, $query);
+            
+
+            if($result)
+            {
+                if($result && mysqli_num_rows($result) > 0)
+                {
+
+                    $user_data = mysqli_fetch_assoc($result);
+                    
+                 
+                    if($user_data['password2'] === $password)
+                    {
+
+                        $_SESSION['email'] = $user_data['email'];
+                        header("Location: index.html");
+                        die;
+                    }
+                }
+            }
+            echo "wrong ";
+            
+        }else
+        {
+            echo "wrong username or password!";
+        }
     }
-} else {
-    echo "It seems like you don't have an account ? <a href=\"../register.html\">Click here to make a new account</a>"  ;
-}
 
-// Close connection
-$conn->close();
 ?>
-
-</body>
-</html>
